@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>RHEL Service Monitor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+    <h2>Service monitor for Red Hat Enterprise Linux Server</h2>
+     <img src="http://opensourcescholars.github.io/os-preso/images/shadowman.png" alt="rhel" style="width:80px;height:69px;">
+</div>
+
+<a href="http://diegorh.sytes.net/cgi-bin/general.sh"&gt;General information</a>
+<form action="/cgi-bin/general.sh" method="post">
+<input type="submit" value="General information">
+</form>
+<br>
+
+<a href="http://diegorh.sytes.net/cgi-bin/ssh.sh"&gt;SSH Status</a>
+<form action="/cgi-bin/ssh.sh" method="post">
+<input type="submit" value="SSH status">
+</form>
+<br>
+
+<a href="http://diegorh.sytes.net/cgi-bin/sql.sh"&gt;SQL Status</a>
+<form action="/cgi-bin/sql.sh" method="post">
+<input type="submit" value="SQL Status">
+</form>
+<br>
+
+<a href="http://diegorh.sytes.net/cgi-bin/postgres.sh"&gt;Postgres Status</a>
+<form action="/cgi-bin/postgres.sh" method="post">
+<input type="submit" value="Postgres Status">
+</form>
+<br>
+
+<a href="http://diegorh.sytes.net/cgi-bin/intrusiones.sh"&gt;Login Attempts</a>
+<form action="/cgi-bin/intrusiones.sh" method="post">
+<input type="submit" value="Login Attempts">
+<br>
+
+</form>
+
+<br>
+</body>
+<div id="footer">
+   <p>
+      <i>Created by DiegoHz, 2017</i> 
+</p>
+</div>
+</html>
