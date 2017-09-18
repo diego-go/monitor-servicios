@@ -2,7 +2,7 @@
 
 echo "Content-type: text/html"
 echo ""
-echo "<html><head><title>General information"
+echo "<html><head><title>Información General"
 echo "</title></head><body>"
 
 echo  "<meta name="viewport" content="width=device-width, initial-scale=1">"
@@ -10,20 +10,24 @@ echo  "<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.
 echo  "<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>"
 echo  "<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>"
 
-echo "<h1 align="center"><p class="bg-danger">Information for host $(hostname -s)</p></h1>"
+echo "<h1 align="center"><p class="bg-danger">Información del host $(hostname -s)</p></h1>"
 echo ""
 
-echo "<h2>Memory Info</h2>"
+# En esta parte, el script nos arrojará la información sobre la memoria del sistema
+echo "<h2>Información de la Memoria</h2>"
 echo "<pre> $(free -m) </pre>"
 
-echo "<h2>Disk Info:</h2>"
+# Información general del disco duro y particiones del servidor
+echo "<h2>Información de disco duro y particiones</h2>"
 echo "<pre> $(df -h) </pre>"
 
-echo "<h2>Server Uptime</h2>"
+#Esta parte nos indica el tiempo que lleva arriba nuestro servidor
+echo "<h2>Tiempo de Actividad del Servidor</h2>"
 echo "<pre> $(uptime) </pre>"
 
-echo "<h2>Apache Requests</h2>"
-echo "<pre> $(systemctl status httpd | grep Status) </pre>"
+#Peticiones 
+echo "<h2>Peticiones Servidor Apache</h2>"
+echo "<pre> $(cat /var/log/access_log) </pre>"
 
 echo "<h2>Logged Users</h2>"
 echo "<pre> $(w) </pre>"
