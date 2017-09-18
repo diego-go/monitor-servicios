@@ -52,3 +52,5 @@ Como los certificados tienen una vigencia, desde cron se manda llamar un binario
 Cron es un demonio que ejecuta procesos cada minuto, día, semana o mes. Los procesos que deben ejecutarse y la hora en la que deben hacerlo se especifican en el fichero crontab.
 
 El servidor ejecuta tareas en cron para que se realicen ciertas cosas y se desplieguen en la página web.
+
+![]({{site.baseurl}}/https://github.com/diego-go/monitor-servicios/blob/master/cron.png)
