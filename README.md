@@ -53,4 +53,4 @@ Cron es un demonio que ejecuta procesos cada minuto, día, semana o mes. Los pro
 
 El servidor ejecuta tareas en cron para que se realicen ciertas cosas y se desplieguen en la página web.
 
-![]({{site.baseurl}}/https://s26.postimg.org/hxttkzcih/cron.png)
+![]({{site.baseurl}}//cron.png)
