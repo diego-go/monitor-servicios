@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <title>RHEL Service Monitor</title>
   <meta charset="utf-8">
@@ -42,14 +42,14 @@
       .row.content {height:auto;} 
     }
   </style>
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="icon" type="image/gif" href="animated.gif">
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="icon" type="image/gif" href="../animated.gif">
 </head>
 <body>
 
 <nav class="navbar navbar-inverse">
-<img src="banner.png" alt="rhel" style="width:700px;height:53px;">
-  <div class="container-fluid">
+<img src="../banner.png" alt="rhel" style="width:700px;height:53px;">  
+ <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -60,8 +60,8 @@
      </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">About</a></li>
-        <li><a href="/monitor">Monitor</a></li>
+        <li><a href="../index.html">About</a></li>
+        <li class="active"><a href="/monitor">Monitor</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
     </div>
@@ -70,33 +70,26 @@
 
 <div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-sm-2 sidenav">
     <div class="bs-example">
     </div>
-    
-    </div>
-    <div class="col-sm-8 text-left"> 
-      <h1>About</h1>
-      <p>En esta página se puede encontrar la información de diferentes servicios que se están ejecutando en un servidor alojado en AWS</p>
-      <hr>
-      <h3>Monitorying</h3>
-<br>    
-<p>El servidor corre diferentes servicios. En los primeros monitores se podrá obtener una información general del servidor, así como el total de memoria y cuanto se está usando actualmente, el uso de disco y cada partición del sistema, tiempo de actividad del servidor, las peticiones al servidor Apache, los usuarios loggeados al momento y la versión del sistema.</p>
-<br>
-<p>Por otro lado se tienen otros servicios principales que son el estado del servicio de SSH, bases de datos MySQL y Postgres</p>
-<br>
-<p>Considerando que es un servidor que está expuesto a Internet y que para fines del monitoreo se abrieron puertos en la consola de AWS, el último servicio que se pone es el de intentos de loggeo, donde se puede observar la actividad de las diferentes ip's que intentan entrar al servidor. </p>
+    <br>
+    <button type="button" onclick="window.location.href='/cgi-bin/general.sh'" class="btn btn-default btn-lg">General Information</button>
+    </form>
 <hr>
-<h3>Resources</h3>
-<br>
-<p>Toda la documentación, información necesaria y código de la página en general se encuentra en <a href="https://github.com/diego-go/monitor-servicios">el siguiente repositorio</a></p>
-    </div>
-
+    <button type="button" onclick="window.location.href='/cgi-bin/ssh.sh'" class="btn btn-default btn-lg">SSH Status</button>
+    </form>
+<hr>
+    <button type="button" onclick="window.location.href='/cgi-bin/sql.sh'" class="btn btn-default btn-lg">SQL Status</button>
+    </form>
+<hr>
+    <button type="button" onclick="window.location.href='/cgi-bin/postgres.sh'" class="btn btn-default btn-lg">Postgres Status</button>
+    </form>
+<hr>
+    <button type="button" onclick="window.location.href='/cgi-bin/intrusiones.sh'" class="btn btn-default btn-lg">Login Attempts</button>
+    </form>
+</div>
    </div>
     </div>
-<footer class="container-fluid text-center">
-  <p>Created by Diego <img src="../diego.png" alt="rhel" style="width:30px;height:30px;"></p>
-</footer>
 
 </body>
 </html>

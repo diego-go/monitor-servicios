@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <title>RHEL Service Monitor</title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -42,13 +42,11 @@
       .row.content {height:auto;} 
     }
   </style>
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="icon" type="image/gif" href="animated.gif">
 </head>
 <body>
 
 <nav class="navbar navbar-inverse">
-<img src="banner.png" alt="rhel" style="width:700px;height:53px;">
+<img src="https://diegorh.sytes.net/rhel3.png" alt="rhel" style="width:200px;height:65px;">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -56,12 +54,12 @@
         <span class="icon-bar"></span>
                      
       </button>
-      <a class="navbar-brand">FOR RED HAT ENTERPRISE LINUX SERVER</a>
+      <a class="navbar-brand">SERVICE MONITOR FOR RED HAT ENTERPRISE LINUX SERVER</a>
      </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">About</a></li>
-        <li><a href="/monitor">Monitor</a></li>
+        <li><a href="../index.html">About</a></li>
+        <li class="active"><a href="/monitor">Monitor</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
     </div>
@@ -72,30 +70,30 @@
   <div class="row content">
     <div class="col-sm-2 sidenav">
     <div class="bs-example">
+    <button type="button" class="btn btn-success btn-lg">General Information</button>
+    <hr>
+    <button type="button" class="btn btn-success btn-lg">SSH Status</button>
+    <hr>
+    <button type="button" class="btn btn-success btn-lg">SQL Status</button>
+    <hr>
+    <button type="button" class="btn btn-success btn-lg">Postgres Status</button>
+    <hr>
+    <button type="button" class="btn btn-success btn-lg">Login Attempts</button>
     </div>
     
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1>About</h1>
-      <p>En esta página se puede encontrar la información de diferentes servicios que se están ejecutando en un servidor alojado en AWS</p>
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <hr>
-      <h3>Monitorying</h3>
-<br>    
-<p>El servidor corre diferentes servicios. En los primeros monitores se podrá obtener una información general del servidor, así como el total de memoria y cuanto se está usando actualmente, el uso de disco y cada partición del sistema, tiempo de actividad del servidor, las peticiones al servidor Apache, los usuarios loggeados al momento y la versión del sistema.</p>
-<br>
-<p>Por otro lado se tienen otros servicios principales que son el estado del servicio de SSH, bases de datos MySQL y Postgres</p>
-<br>
-<p>Considerando que es un servidor que está expuesto a Internet y que para fines del monitoreo se abrieron puertos en la consola de AWS, el último servicio que se pone es el de intentos de loggeo, donde se puede observar la actividad de las diferentes ip's que intentan entrar al servidor. </p>
-<hr>
-<h3>Resources</h3>
-<br>
-<p>Toda la documentación, información necesaria y código de la página en general se encuentra en <a href="https://github.com/diego-go/monitor-servicios">el siguiente repositorio</a></p>
+      <h3>Test</h3>
+      <p>Lorem ipsum...</p>
     </div>
-
    </div>
     </div>
+
 <footer class="container-fluid text-center">
-  <p>Created by Diego <img src="../diego.png" alt="rhel" style="width:30px;height:30px;"></p>
+  <p>Created by DiegoGo</p>
 </footer>
 
 </body>
