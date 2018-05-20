@@ -26,7 +26,7 @@ echo "<h2>Tiempo de Actividad</h2>"
 echo "<pre> $(uptime) </pre>"
 
 # Peticiones hechas al servidor web
-echo "<h2>Peticiones al Servidor Apache</h2>"
+echo "<h2>Peticiones al Servidor</h2>"
 echo "<pre> $(cat apache_log.txt) </pre>"
 
 # Usuarios loggeados al sistema
