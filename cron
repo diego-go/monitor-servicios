@@ -1,0 +1,18 @@
+# Contatena la salida del log secure hacia un archivo de texto cada
+# cada segundo para que posteriormente pueda ser llamado hacie el servicio web
+
+* * * * * cat /var/log/secure | grep preauth | tail -29 > /var/www/cgi-bin/logins.txt
+
+# Renueva los certificados SSL a media noche
+#0 0 * * * /usr/bin/certbot renew &> /var/log/certbot.cronlog
+
+# Lista los túneles SSH establecidos
+* * * * * lsof -i -n | grep '\<ssh\>' /var/www/cgi-bin/tuneles.txt
+
+# Agrega OK o Warning al servicio
+* * * * * /var/www/cgi-bin/statusSSH.sh
+* * * * * /var/www/cgi-bin/statusPOSTGRES.sh
+* * * * * /var/www/cgi-bin/statusMARIADB.sh
+
+# Crea log de peticiones a Apache
+* * * * * cat /var/log/httpd/access_log > /var/www/cgi-bin/apache_log.txt
