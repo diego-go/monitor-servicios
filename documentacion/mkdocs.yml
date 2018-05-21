@@ -1,1 +1,9 @@
-site_name: My Docs
+site_name: Monitor de servicios-Proyecto web
+theme: readthedocs
+extra:
+    theme_inverse: true
+pages:
+  - Home: index.md
+  - Paquetes: paquetes.md
+  - Acerca: about.md
+

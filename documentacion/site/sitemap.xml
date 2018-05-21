@@ -9,4 +9,20 @@
     </url>
     
 
+    
+    <url>
+     <loc>/paquetes/</loc>
+     <lastmod>2018-05-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/about/</loc>
+     <lastmod>2018-05-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
 </urlset>
