@@ -2,23 +2,88 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Welcome to MkDocs"
+            "text": "Monitor de servicios\n\n\nEsta p\u00e1gina contiene la documentaci\u00f3n de todo lo que se ha creado en la p\u00e1gina web del \nproyecto web\n\n\nEn ella se pondr\u00e1 a detalle qu\u00e9 es lo que hace la p\u00e1gina web y su prop\u00f3sito.\n\n\nComenzando\n\n\nEste proyecto se genera a partir de la materia de \nDesarrollo web\n de la carrera de \nMatem\u00e1ticas Aplicadas y Computaci\u00f3n\n de la \nFES Acatl\u00e1n\n con la idea de crear una p\u00e1gina web en donde mediante el uso de scripts se est\u00e9n monitoreando los diferentes servicios que se est\u00e1n corriendo en el servidor.\n\n\nEl servidor monitorea servicios, tales como Docker, base de datos, datos generales, peticiones al servidor, etc.\n\n\nLa p\u00e1gina web est\u00e1 alojada en un servidor \nRed Hat Enterprise Linux 7\n que est\u00e1 brinda el servicio de \nGoogle Cloud Platform\n para poder generar todos los reportes y los diferentes servicios que el servidor est\u00e1 corriendo.\n\n\nCaracter\u00edsticas del servidor\n\n\nComo se mencion\u00f3 antes, se est\u00e1n usando el servicio de \nGoogle Cloud Platform\n en su modalidad gratuita de 1 a\u00f1o, donde brindan la posibilidad de 300usd para hacer uso de su plataforma y crear instancias virtuales con diferentes distribuciones GNU/Linux.\n\n\nEn este caso, se est\u00e1 usando la distribuci\u00f3n Red Hat Enterprise Linux en su versi\u00f3n 7.5.\n\n\nLa instancia es una de las m\u00e1s peque\u00f1as, sus caracter\u00edsticas son:\n\n g1-small \n\n 1 CPU virtual)\n\n 1.7 GB de memoria\n\n 10 gb de disco\n\n\nRequerimientos de conexi\u00f3n\n\n\nPara trabajar con el servidor ser\u00e1 necesario tener un llave p\u00fablica para usar una conexi\u00f3n SSH para acceder a \u00e9l y comenzar a trabajar en sus configuraciones.", 
+            "title": "Home"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
+            "location": "/#monitor-de-servicios", 
+            "text": "Esta p\u00e1gina contiene la documentaci\u00f3n de todo lo que se ha creado en la p\u00e1gina web del  proyecto web  En ella se pondr\u00e1 a detalle qu\u00e9 es lo que hace la p\u00e1gina web y su prop\u00f3sito.", 
+            "title": "Monitor de servicios"
         }, 
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
+            "location": "/#comenzando", 
+            "text": "Este proyecto se genera a partir de la materia de  Desarrollo web  de la carrera de  Matem\u00e1ticas Aplicadas y Computaci\u00f3n  de la  FES Acatl\u00e1n  con la idea de crear una p\u00e1gina web en donde mediante el uso de scripts se est\u00e9n monitoreando los diferentes servicios que se est\u00e1n corriendo en el servidor.  El servidor monitorea servicios, tales como Docker, base de datos, datos generales, peticiones al servidor, etc.  La p\u00e1gina web est\u00e1 alojada en un servidor  Red Hat Enterprise Linux 7  que est\u00e1 brinda el servicio de  Google Cloud Platform  para poder generar todos los reportes y los diferentes servicios que el servidor est\u00e1 corriendo.", 
+            "title": "Comenzando"
         }, 
         {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/#caracteristicas-del-servidor", 
+            "text": "Como se mencion\u00f3 antes, se est\u00e1n usando el servicio de  Google Cloud Platform  en su modalidad gratuita de 1 a\u00f1o, donde brindan la posibilidad de 300usd para hacer uso de su plataforma y crear instancias virtuales con diferentes distribuciones GNU/Linux.  En este caso, se est\u00e1 usando la distribuci\u00f3n Red Hat Enterprise Linux en su versi\u00f3n 7.5.  La instancia es una de las m\u00e1s peque\u00f1as, sus caracter\u00edsticas son:  g1-small   1 CPU virtual)  1.7 GB de memoria  10 gb de disco", 
+            "title": "Caracter\u00edsticas del servidor"
+        }, 
+        {
+            "location": "/#requerimientos-de-conexion", 
+            "text": "Para trabajar con el servidor ser\u00e1 necesario tener un llave p\u00fablica para usar una conexi\u00f3n SSH para acceder a \u00e9l y comenzar a trabajar en sus configuraciones.", 
+            "title": "Requerimientos de conexi\u00f3n"
+        }, 
+        {
+            "location": "/paquetes/", 
+            "text": "Instalaci\u00f3n de paquetes\n\n\nPara comenzar ser\u00e1 necesario que se tengan ciertos paquetes instalados en nuestro servidor. \n\n\nPrimeramente para tener nuestro servidor web necesitaremos instalar el paquete httpd ese paquete ser\u00e1 el que nos de nuestra interfaz web.\n\n\nyum install -y httpd\n\n\nUna vez terminada la instalaci\u00f3n ser\u00e1 necesario iniciar el servicio web.\n\n\nsystemctl start httpd\n\n\nPara habilitar el servicio en caso de que reinicie el servidor.\n\n\nsystemctl enable httpd\n\n\nServicio de nombre de dominio\n\n\nPor defecto, el servicio de \nGoogle Cloud Platform\n nos genera una ip p\u00fablica, misma que se puede colocar en el navegador para que podamos accesar al servicio web que nos da Apache.\n\n\nPara no poner la direcci\u00f3n web y una usar un nombre de dominio, se est\u00e1 usando el servicio de \nNoIP\n que es el que nos ayudar\u00e1 a resolver el nombre de dominio para que nos sea m\u00e1s f\u00e1cil recordar la direcci\u00f3n web \ndiegomac.sytes.net\n\n\nPara la instalaci\u00f3n de no ip ser\u00e1 necesario descargar un paquete de su web, descargarlo en la ruta \n/usr/local/src\n descomprimirlo, compilarlo y seguir los pasos que se nos piden para dar de alta nuestro nombre de dominio.\n\n\nScripts\n\n\nTodos los scripts que tengamos ir\u00e1n en la carpeta \n/var/www/cgi-bin/\n esta carpeta hace referencia a la interfaz de entrada com\u00fan, es una tecnolog\u00eda que permite a un navegador solicitar datos de un programa ejecutado en un servidor web. \n\n\nCGI\n especifica un est\u00e1ndar para transferir datos entre el cliente y el programa. Es un mecanismo de comunicaci\u00f3n entre el servidor web y una aplicaci\u00f3n externa.\n\n\nNecesitaremos un editor de texto para poder crear los scripts, en este caso se puede nano o vim.\n\n\nPara instalarlo basta con hacer\n\n\nyum install -y nano vim\n\n\nInformaci\u00f3n general\n\n\nEn esta primera opci\u00f3n podremos visualizar los detalles generales de nuestro servidor, disco duro, memoria, usuarios loggeados en el sistema, peticiones al servidor Apache, version del sistema y el tiempo de actividad del server.\n\n\nEstado del servicio de SSH\n\n\nAl entrar al apartado del servicio SSH, vamos encontrarnos con el estdo del servicio, si est\u00e1 arriba o abajo y los t\u00faneles que est\u00e1n establecidos en ese momento.\n\n\nDBMS\n\n\nPara poder monitorear el estado de un DBMS ser\u00e1 necesario instalar uno de ellos, en este caso se usar\u00e1 MariaDB.\n\n\nPara la instalaci\u00f3n de MariaDB, basta con instalar el paquete \n\n\nyum install -y mariadb-server\n\n\nUna vez hecho esto, procedemos iniciar el servicio\n\n\nsystemctl start mariadb\n\n\nVerificamos que est\u00e9 corriendo\n\n\nsystemctl status mariadb\n\n\nDocker\n\n\nEste monitor lo que hace es primeramente checar el estado del servicio de contenedores Docker, si est\u00e1 activo o est\u00e1 ca\u00eddo y tambi\u00e9n verificar\u00e1 qu\u00e9 contenedores est\u00e1n corriendo en ese momento.\n\n\nCron\n\n\nCron es un demonio que ejecuta procesos cada minuto, d\u00eda, semana o mes. Los procesos que deben ejecutarse y la hora en la que deben hacerlo se especifican en el fichero crontab.\n\n\nEl servidor ejecuta tareas en cron para que se realicen ciertas cosas y se desplieguen en la p\u00e1gina web.\n\n\nCertificado SSL\n\n\nComo pr\u00e1ctica adicional todas las p\u00e1ginas del servidor usan el protocolo de seguridad https, usando certificados de seguridad ssl emitidos por Let's encrypt. Para hacer eso se instal\u00f3 el paquete certbot que es el que en autom\u00e1tico habilita el https en el sitio web.\n\n\nComo los certificados tienen una vigencia, desde cron se manda llamar un binario para que lo renueve al finalizar cada d\u00eda.", 
+            "title": "Paquetes"
+        }, 
+        {
+            "location": "/paquetes/#instalacion-de-paquetes", 
+            "text": "Para comenzar ser\u00e1 necesario que se tengan ciertos paquetes instalados en nuestro servidor.   Primeramente para tener nuestro servidor web necesitaremos instalar el paquete httpd ese paquete ser\u00e1 el que nos de nuestra interfaz web.  yum install -y httpd  Una vez terminada la instalaci\u00f3n ser\u00e1 necesario iniciar el servicio web.  systemctl start httpd  Para habilitar el servicio en caso de que reinicie el servidor.  systemctl enable httpd", 
+            "title": "Instalaci\u00f3n de paquetes"
+        }, 
+        {
+            "location": "/paquetes/#servicio-de-nombre-de-dominio", 
+            "text": "Por defecto, el servicio de  Google Cloud Platform  nos genera una ip p\u00fablica, misma que se puede colocar en el navegador para que podamos accesar al servicio web que nos da Apache.  Para no poner la direcci\u00f3n web y una usar un nombre de dominio, se est\u00e1 usando el servicio de  NoIP  que es el que nos ayudar\u00e1 a resolver el nombre de dominio para que nos sea m\u00e1s f\u00e1cil recordar la direcci\u00f3n web  diegomac.sytes.net  Para la instalaci\u00f3n de no ip ser\u00e1 necesario descargar un paquete de su web, descargarlo en la ruta  /usr/local/src  descomprimirlo, compilarlo y seguir los pasos que se nos piden para dar de alta nuestro nombre de dominio.", 
+            "title": "Servicio de nombre de dominio"
+        }, 
+        {
+            "location": "/paquetes/#scripts", 
+            "text": "Todos los scripts que tengamos ir\u00e1n en la carpeta  /var/www/cgi-bin/  esta carpeta hace referencia a la interfaz de entrada com\u00fan, es una tecnolog\u00eda que permite a un navegador solicitar datos de un programa ejecutado en un servidor web.   CGI  especifica un est\u00e1ndar para transferir datos entre el cliente y el programa. Es un mecanismo de comunicaci\u00f3n entre el servidor web y una aplicaci\u00f3n externa.  Necesitaremos un editor de texto para poder crear los scripts, en este caso se puede nano o vim.  Para instalarlo basta con hacer  yum install -y nano vim", 
+            "title": "Scripts"
+        }, 
+        {
+            "location": "/paquetes/#informacion-general", 
+            "text": "En esta primera opci\u00f3n podremos visualizar los detalles generales de nuestro servidor, disco duro, memoria, usuarios loggeados en el sistema, peticiones al servidor Apache, version del sistema y el tiempo de actividad del server.", 
+            "title": "Informaci\u00f3n general"
+        }, 
+        {
+            "location": "/paquetes/#estado-del-servicio-de-ssh", 
+            "text": "Al entrar al apartado del servicio SSH, vamos encontrarnos con el estdo del servicio, si est\u00e1 arriba o abajo y los t\u00faneles que est\u00e1n establecidos en ese momento.", 
+            "title": "Estado del servicio de SSH"
+        }, 
+        {
+            "location": "/paquetes/#dbms", 
+            "text": "Para poder monitorear el estado de un DBMS ser\u00e1 necesario instalar uno de ellos, en este caso se usar\u00e1 MariaDB.  Para la instalaci\u00f3n de MariaDB, basta con instalar el paquete   yum install -y mariadb-server  Una vez hecho esto, procedemos iniciar el servicio  systemctl start mariadb  Verificamos que est\u00e9 corriendo  systemctl status mariadb", 
+            "title": "DBMS"
+        }, 
+        {
+            "location": "/paquetes/#docker", 
+            "text": "Este monitor lo que hace es primeramente checar el estado del servicio de contenedores Docker, si est\u00e1 activo o est\u00e1 ca\u00eddo y tambi\u00e9n verificar\u00e1 qu\u00e9 contenedores est\u00e1n corriendo en ese momento.", 
+            "title": "Docker"
+        }, 
+        {
+            "location": "/paquetes/#cron", 
+            "text": "Cron es un demonio que ejecuta procesos cada minuto, d\u00eda, semana o mes. Los procesos que deben ejecutarse y la hora en la que deben hacerlo se especifican en el fichero crontab.  El servidor ejecuta tareas en cron para que se realicen ciertas cosas y se desplieguen en la p\u00e1gina web.", 
+            "title": "Cron"
+        }, 
+        {
+            "location": "/paquetes/#certificado-ssl", 
+            "text": "Como pr\u00e1ctica adicional todas las p\u00e1ginas del servidor usan el protocolo de seguridad https, usando certificados de seguridad ssl emitidos por Let's encrypt. Para hacer eso se instal\u00f3 el paquete certbot que es el que en autom\u00e1tico habilita el https en el sitio web.  Como los certificados tienen una vigencia, desde cron se manda llamar un binario para que lo renueve al finalizar cada d\u00eda.", 
+            "title": "Certificado SSL"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Contacto\n\n\nGitHub diego-go\n\n\nTelegram @diegola\n\n\nMail me at \ndiegogo.hdez [at] protonmail.com", 
+            "title": "Acerca"
+        }, 
+        {
+            "location": "/about/#contacto", 
+            "text": "GitHub diego-go  Telegram @diegola  Mail me at  diegogo.hdez [at] protonmail.com", 
+            "title": "Contacto"
         }
     ]
 }

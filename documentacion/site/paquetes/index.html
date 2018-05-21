@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Paquetes - Monitor de servicios-Proyecto web</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Paquetes";
+    var mkdocs_page_input_path = "paquetes.md";
+    var mkdocs_page_url = "/paquetes/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Monitor de servicios-Proyecto web</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Paquetes</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#instalacion-de-paquetes">Instalación de paquetes</a></li>
+    
+
+    <li class="toctree-l2"><a href="#servicio-de-nombre-de-dominio">Servicio de nombre de dominio</a></li>
+    
+
+    <li class="toctree-l2"><a href="#scripts">Scripts</a></li>
+    
+
+    <li class="toctree-l2"><a href="#informacion-general">Información general</a></li>
+    
+
+    <li class="toctree-l2"><a href="#estado-del-servicio-de-ssh">Estado del servicio de SSH</a></li>
+    
+
+    <li class="toctree-l2"><a href="#dbms">DBMS</a></li>
+    
+
+    <li class="toctree-l2"><a href="#docker">Docker</a></li>
+    
+
+    <li class="toctree-l2"><a href="#cron">Cron</a></li>
+    
+
+    <li class="toctree-l2"><a href="#certificado-ssl">Certificado SSL</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">Acerca</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Monitor de servicios-Proyecto web</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Paquetes</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="instalacion-de-paquetes">Instalación de paquetes</h1>
+<p>Para comenzar será necesario que se tengan ciertos paquetes instalados en nuestro servidor. </p>
+<p>Primeramente para tener nuestro servidor web necesitaremos instalar el paquete httpd ese paquete será el que nos de nuestra interfaz web.</p>
+<p><code>yum install -y httpd</code></p>
+<p>Una vez terminada la instalación será necesario iniciar el servicio web.</p>
+<p><code>systemctl start httpd</code></p>
+<p>Para habilitar el servicio en caso de que reinicie el servidor.</p>
+<p><code>systemctl enable httpd</code></p>
+<h1 id="servicio-de-nombre-de-dominio">Servicio de nombre de dominio</h1>
+<p>Por defecto, el servicio de <em>Google Cloud Platform</em> nos genera una ip pública, misma que se puede colocar en el navegador para que podamos accesar al servicio web que nos da Apache.</p>
+<p>Para no poner la dirección web y una usar un nombre de dominio, se está usando el servicio de <a href="https://www.noip.com/">NoIP</a> que es el que nos ayudará a resolver el nombre de dominio para que nos sea más fácil recordar la dirección web <a href="https://www.noip.com/">diegomac.sytes.net</a></p>
+<p>Para la instalación de no ip será necesario descargar un paquete de su web, descargarlo en la ruta <code>/usr/local/src</code> descomprimirlo, compilarlo y seguir los pasos que se nos piden para dar de alta nuestro nombre de dominio.</p>
+<h1 id="scripts">Scripts</h1>
+<p>Todos los scripts que tengamos irán en la carpeta <strong>/var/www/cgi-bin/</strong> esta carpeta hace referencia a la interfaz de entrada común, es una tecnología que permite a un navegador solicitar datos de un programa ejecutado en un servidor web. </p>
+<p><strong>CGI</strong> especifica un estándar para transferir datos entre el cliente y el programa. Es un mecanismo de comunicación entre el servidor web y una aplicación externa.</p>
+<p>Necesitaremos un editor de texto para poder crear los scripts, en este caso se puede nano o vim.</p>
+<p>Para instalarlo basta con hacer</p>
+<p><code>yum install -y nano vim</code></p>
+<h1 id="informacion-general">Información general</h1>
+<p>En esta primera opción podremos visualizar los detalles generales de nuestro servidor, disco duro, memoria, usuarios loggeados en el sistema, peticiones al servidor Apache, version del sistema y el tiempo de actividad del server.</p>
+<h1 id="estado-del-servicio-de-ssh">Estado del servicio de SSH</h1>
+<p>Al entrar al apartado del servicio SSH, vamos encontrarnos con el estdo del servicio, si está arriba o abajo y los túneles que están establecidos en ese momento.</p>
+<h1 id="dbms">DBMS</h1>
+<p>Para poder monitorear el estado de un DBMS será necesario instalar uno de ellos, en este caso se usará MariaDB.</p>
+<p>Para la instalación de MariaDB, basta con instalar el paquete </p>
+<p><code>yum install -y mariadb-server</code></p>
+<p>Una vez hecho esto, procedemos iniciar el servicio</p>
+<p><code>systemctl start mariadb</code></p>
+<p>Verificamos que esté corriendo</p>
+<p><code>systemctl status mariadb</code></p>
+<h1 id="docker">Docker</h1>
+<p>Este monitor lo que hace es primeramente checar el estado del servicio de contenedores Docker, si está activo o está caído y también verificará qué contenedores están corriendo en ese momento.</p>
+<h1 id="cron">Cron</h1>
+<p>Cron es un demonio que ejecuta procesos cada minuto, día, semana o mes. Los procesos que deben ejecutarse y la hora en la que deben hacerlo se especifican en el fichero crontab.</p>
+<p>El servidor ejecuta tareas en cron para que se realicen ciertas cosas y se desplieguen en la página web.</p>
+<h1 id="certificado-ssl">Certificado SSL</h1>
+<p>Como práctica adicional todas las páginas del servidor usan el protocolo de seguridad https, usando certificados de seguridad ssl emitidos por Let's encrypt. Para hacer eso se instaló el paquete certbot que es el que en automático habilita el https en el sitio web.</p>
+<p>Como los certificados tienen una vigencia, desde cron se manda llamar un binario para que lo renueve al finalizar cada día.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../about/" class="btn btn-neutral float-right" title="Acerca">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
