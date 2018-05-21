@@ -6,7 +6,7 @@ La idea de estos scripts es dar la información necesaria del estado de diferent
 
 ## Server
 
-El servidor está alojado en AWS. Es un RHEL release 7.4
+El servidor está alojado en GCP
 
 ## Requerimientos de conexión
 
@@ -25,7 +25,7 @@ Necesitaremos un editor de texto para poder crear los scripts, en este caso se p
 _yum install -y nano vim_
 
 ### DBMS
-Para poder monitorear el estado de un DBMS será necesario instalar uno de ellos, en este caso se usará Postgres y MariaDB.
+Para poder monitorear el estado de un DBMS será necesario instalar uno de ellos, en este caso se usará MariaDB.
 
 Para la instalación de MariaDB, basta con instalar el paquete _yum install -y mariadb-server.x8664_
 Una vez hecho esto, procedemosa iniciar el servicio
@@ -36,13 +36,6 @@ Verificamos que esté corriendo
 
 _systemctl status mariadb_
 
-Para instalar Postgres tendremos que instalar el siguiente paquete _yum install postgresql-server_
-Después de instalado iniciamos el servicio 
-_systemctl start postgresql_
-
-Y lo habilitamos para el inicio del sistema.
-_systemctl enable postgresql_
-
 ### https
 Como práctica adicional todas las páginas del servidor usan el protocolo de seguridad https, usando certificados de seguridad ssl emitidos por Let's encrypt. Para hacer eso se instaló el paquete certbot que es el que en automático habilita el https en el sitio web.
 
@@ -52,5 +45,3 @@ Como los certificados tienen una vigencia, desde cron se manda llamar un binario
 Cron es un demonio que ejecuta procesos cada minuto, día, semana o mes. Los procesos que deben ejecutarse y la hora en la que deben hacerlo se especifican en el fichero crontab.
 
 El servidor ejecuta tareas en cron para que se realicen ciertas cosas y se desplieguen en la página web.
-
-![]({{site.baseurl}}//cron.png)
